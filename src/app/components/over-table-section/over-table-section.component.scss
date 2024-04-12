@@ -1,0 +1,75 @@
+@import "../../app.component.scss";
+
+.custom-btn-table {
+    @extend .shard-flex;
+    @extend .custom-btn-back;
+    @extend .shard-transition;
+    background-color: #fff;
+}
+
+.custom-btn-table-new {
+    @extend .shard-flex;
+    @extend .shard-transition;
+    background-color: #8A74F9;
+    border: 1px solid #8A74F9;
+    color: #fff;
+    width: 100px;
+    height: 35px;
+
+    span {
+        font-size: 12px;
+    }
+}
+
+.over-table-section {
+    @extend .shard-flex-between;
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+    }
+
+    & div:first-child {
+        flex-wrap: wrap;
+    }
+
+    & div:first-child,
+    & div:last-child {
+        @extend .shard-flex-between;
+
+        @media screen and (max-width: 768px) {
+            width: 100%;
+        }
+    }
+}
+
+:host ::ng-deep {
+    .p-inputswitch {
+        width: 34px;
+        height: 18px;
+        display: block;
+
+        &.p-focus .p-inputswitch-slider {
+            box-shadow: none;
+        }
+
+        .p-inputswitch-slider {
+            background: #8A74F9;
+
+            &:before {
+                background: #ffffff;
+                width: 13px;
+                height: 13px;
+                top: 70%;
+                left: 2.5px;
+            }
+        }
+
+        &.p-inputswitch-checked .p-inputswitch-slider {
+            background: #ced4da;
+
+            &:before {
+                transform: translateX(1rem);
+            }
+        }
+    }
+}

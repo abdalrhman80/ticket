@@ -1,0 +1,95 @@
+.apex-charts {
+    width: 100%;
+    height: 290px;
+    background-color: #fff;
+    color: #1C1C28;
+
+    @media screen and (max-width: 768px) {
+        height: 320px;
+    }
+
+    .chart-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+            align-items: flex-start;
+
+            .custom-btn {
+                align-self: flex-end;
+            }
+        }
+
+        .chart-title {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            font-size: 14px;
+            text-align: center;
+
+            font-weight: 400;
+
+            p:first-of-type {
+                font-size: 16px;
+            }
+
+            p:last-of-type {
+                span {
+                    font-family: Inter;
+                    color: #99A1B7;
+                }
+            }
+        }
+
+        .custom-btn {
+            width: 67.37px;
+            height: 30.28px;
+            background: #FAFAFA;
+            border: 1px solid #E8E8E8;
+            transition: background-color 0.2s;
+
+            &:hover {
+                background-color: #E8E8E8;
+            }
+
+            span {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+:host ::ng-deep {
+    .arrow_box {
+        position: relative;
+        text-align: center;
+        color: #E5E5EF !important;
+        background: #1E1B39;
+        border: none !important;
+        width: 90.58px;
+        height: 41.13px;
+        padding: 1px 5px;
+        border-radius: 6.5px;
+
+        &>p {
+            font-size: 12.11px;
+        }
+
+        &>div {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            font-size: 10px;
+            color: #8A74F9;
+        }
+    }
+
+    .apexcharts-tooltip {
+        border: none !important;
+        transform: translateY(5px);
+        overflow: visible !important;
+        white-space: normal !important;
+    }
+}

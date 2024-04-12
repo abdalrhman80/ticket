@@ -1,0 +1,29 @@
+<div id="chart" class="apex-charts rounded-2 pt-2 pe-3">
+    <div class="chart-header mb-2 ps-4 pe-2">
+        <div class="chart-title mb-2 mb-lg-0">
+            <p class="mb-0">إحصائيات إستخدام القسيمة</p>
+            <p class="mb-0">
+                <span> 05 يوليو , 2023 - 05 أغسطس , 2023</span>
+                <svg class="cursor-pointer me-2" width="10" height="7" viewBox="0 0 8 5" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.21882 0.651932L4.10941 3.67981L1 0.651932" stroke="#92A1AD" stroke-width="1.20977"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </p>
+        </div>
+
+        <button class="custom-btn rounded-2 d-flex align-items-center justify-content-between px-2">
+            <span>سنويا</span>
+            <svg class="ms-1" width="11" height="12" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M2.05794 4.20835L4.56457 6.87616C4.8606 7.19122 5.34501 7.19122 5.64103 6.87616L8.14766 4.20835"
+                    stroke="#898989" stroke-width="0.826481" stroke-miterlimit="10" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </button>
+    </div>
+
+    <apx-chart [colors]="['#8A74F9']" [series]="chartOptions.series" [chart]="chartOptions.chart"
+        [xaxis]="chartOptions.xaxis" [yaxis]="chartOptions.yaxis" [stroke]="chartOptions.stroke" [tooltip]="chartOptions.tooltip"
+        [dataLabels]="chartOptions.dataLabels" [fill]="chartOptions.fill"></apx-chart>
+</div>

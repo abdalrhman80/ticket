@@ -1,45 +1,34 @@
-.shard-flex {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.shard-transition {
-    transition: all .2s;
-}
-
-.shard-flex-between {
-    @extend .shard-flex;
-    justify-content: space-between;
-}
+@import "../shard.scss";
 
 .custom-btn {
     @extend .shard-flex;
-    @extend .shard-transition;
-    background-color: #f9f9f9;
-    border: 1px solid #E9EAEA;
+    @include transition(all);
+    background-color: var(--custom-btn-bg);
+    border: 1px solid var(--custom-btn-border-color);
     width: 78px;
     height: 34px;
 
     span {
-        font-size: 14px;
-        font-weight: 400;
+        font: {
+            size: 14px;
+            weight: 400;
+        }
     }
 
     &:hover {
-        background-color: #f3f3f3;
+        background-color: var(--custom-btn-hover-bg);
     }
 }
 
 .custom-btn-back {
     @extend .shard-flex;
-    @extend .shard-transition;
+    @include transition(all);
     width: 32px;
     height: 32px;
-    border: #E7EAED 1px solid;
-    background: #E7EAED;
+    background: var(--custom-btn-back-bg);
+    border: var(--custom-btn-back-border-color) 1px solid;
 
     &:hover {
-        background-color: #d9dee4;
+        background-color: var(--custom-btn-back-hover-bg);
     }
 }

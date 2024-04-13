@@ -1,0 +1,29 @@
+@import "../../../shard.scss";
+
+.loaderLayer {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background-color: var(--body-bg);
+    @extend .shard-flex;
+
+    img {
+        width: 200px;
+        animation: fadeIn 1s infinite;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

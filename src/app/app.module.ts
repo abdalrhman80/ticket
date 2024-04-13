@@ -17,13 +17,15 @@ import { InputSwitchModule } from 'primeng/inputswitch';
 import { OverTableSectionComponent } from './components/over-table-section/over-table-section.component';
 import { PaginatorModule } from 'primeng/paginator';
 import { DropdownModule } from 'primeng/dropdown';
+import { LoaderComponent } from './components/loader/loader.component';
 @NgModule({
   declarations: [
     AppComponent,
     CardComponent,
     TableComponent,
     ChartSplineComponent,
-    OverTableSectionComponent
+    OverTableSectionComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,

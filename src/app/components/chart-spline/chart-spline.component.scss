@@ -1,17 +1,52 @@
+@import '../../../shard.scss';
+
 .apex-charts {
     width: 100%;
     height: 290px;
-    background-color: #fff;
-    color: #1C1C28;
-
-    @media screen and (max-width: 768px) {
-        height: 320px;
-    }
+    background-color: var(--primary-color-white);
 
     .chart-header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        @extend .shard-flex-between;
+
+        .chart-title {
+            @extend .shard-flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: center;
+
+            font: {
+                size: 14px;
+                weight: 400;
+            }
+
+            p:first-of-type {
+                color: var(--chart-title-color);
+                font-size: 16px;
+            }
+
+            p:last-of-type {
+                span {
+                    font-family: var(--second-font);
+                    color: var(--chart-second-title-color);
+                }
+            }
+        }
+
+        .custom-btn {
+            width: 67.37px;
+            height: 30.28px;
+            background: var(--chart-custom-btn-bg);
+            border: 1px solid var(--chart-custom-btn-color);
+            @include transition(background-color);
+
+            &:hover {
+                background-color: var(--chart-custom-btn-color);
+            }
+
+            span {
+                font-size: 14px;
+            }
+        }
 
         @media screen and (max-width: 768px) {
             flex-direction: column;
@@ -21,43 +56,10 @@
                 align-self: flex-end;
             }
         }
+    }
 
-        .chart-title {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            font-size: 14px;
-            text-align: center;
-
-            font-weight: 400;
-
-            p:first-of-type {
-                font-size: 16px;
-            }
-
-            p:last-of-type {
-                span {
-                    font-family: Inter;
-                    color: #99A1B7;
-                }
-            }
-        }
-
-        .custom-btn {
-            width: 67.37px;
-            height: 30.28px;
-            background: #FAFAFA;
-            border: 1px solid #E8E8E8;
-            transition: background-color 0.2s;
-
-            &:hover {
-                background-color: #E8E8E8;
-            }
-
-            span {
-                font-size: 14px;
-            }
-        }
+    @media screen and (max-width: 768px) {
+        height: 320px;
     }
 }
 
@@ -65,8 +67,8 @@
     .arrow_box {
         position: relative;
         text-align: center;
-        color: #E5E5EF !important;
-        background: #1E1B39;
+        color: var(--chart-tooltip-color-text) !important;
+        background: var(--chart-tooltip-color-bg);
         border: none !important;
         width: 90.58px;
         height: 41.13px;
@@ -78,18 +80,16 @@
         }
 
         &>div {
-            display: flex;
-            align-items: center;
+            @extend .shard-flex;
             justify-content: flex-start;
             font-size: 10px;
-            color: #8A74F9;
+            color: var(--primary-color);
         }
     }
 
     .apexcharts-tooltip {
         border: none !important;
         transform: translateY(5px);
-        overflow: visible !important;
         white-space: normal !important;
     }
 }

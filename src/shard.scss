@@ -1,0 +1,77 @@
+:root {
+    --main-font: 'Neo Sans Arabic', sans-serif;
+    --second-font: Inter;
+    --direction: rtl;
+    --primary-color: #8A74F9;
+    --primary-color-white: #ffffff;
+    --body-bg: #F3F5F7;
+    --switch-bg: #ced4da;
+    --tooltip-bg: #1E1B39;
+    --tooltip-text-color: #D9D9D9;
+    --input-border-color: #92A1AD66;
+    --custom-btn-bg: #f9f9f9;
+    --custom-btn-hover-bg: #f3f3f3;
+    --custom-btn-border-color: #E9EAEA;
+    --custom-btn-back-bg: #E7EAED;
+    --custom-btn-back-hover-bg: #d9dee4;
+    --custom-btn-back--border-color: var(--custom-btn-back-bg);
+    --chart-custom-btn-bg: #fafafa;
+    --chart-custom-btn-color: #E8E8E8;
+    --chart-tooltip-color-text: #E5E5EF;
+    --chart-tooltip-color-bg: var(--tooltip-bg);
+    --chart-title-color: #1C1C28;
+    --chart-second-title-color: #99A1B7;
+    --copy-section-border-color: #DDDDDD;
+    --table-cell-color: #ABAAB1;
+    --paginator-color: #7E8299;
+    --dropdown-shadow: #9a89f3bf;
+    --table-ticket-info-color: #00000066;
+    --table-user-phone-color: #92A1AD;
+    --table-header-bg: #f8f8f9;
+    --table-body-color: #495057;
+    --table-footer-color: #333333;
+    --table-td-border-color: #e2e8f0;
+}
+
+::selection {
+    background-color: var(--primary-color);
+    color: var(--primary-color-white);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.shard-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shard-flex-between {
+    @extend .shard-flex;
+    justify-content: space-between;
+}
+
+.shard-flex-evenly {
+    @extend .shard-flex;
+    justify-content: space-evenly;
+}
+
+.shard-transition {
+    transition: all .2s;
+}
+
+@mixin transition($time) {
+    transition: $time .2s;
+}

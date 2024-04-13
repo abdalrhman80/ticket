@@ -1,26 +1,5 @@
 @import "../../app.component.scss";
 
-.custom-btn-table {
-    @extend .shard-flex;
-    @extend .custom-btn-back;
-    @extend .shard-transition;
-    background-color: #fff;
-}
-
-.custom-btn-table-new {
-    @extend .shard-flex;
-    @extend .shard-transition;
-    background-color: #8A74F9;
-    border: 1px solid #8A74F9;
-    color: #fff;
-    width: 100px;
-    height: 35px;
-
-    span {
-        font-size: 12px;
-    }
-}
-
 .over-table-section {
     @extend .shard-flex-between;
 
@@ -28,12 +7,40 @@
         flex-direction: column;
     }
 
-    & div:first-child {
+    .right-section {
         flex-wrap: wrap;
+
+        .custom-btn-right {
+            @extend .shard-flex;
+            @extend .custom-btn-back;
+            @include transition(all);
+            background-color: var(--primary-color-white);
+            border: 1px solid var(--custom-btn-border-color);
+
+            &:hover {
+                background-color: var(--custom-btn-hover-bg);
+            }
+        }
     }
 
-    & div:first-child,
-    & div:last-child {
+    .left-section {
+        .custom-btn-left {
+            @extend .shard-flex;
+            @include transition(all);
+            background-color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color-white);
+            width: 100px;
+            height: 35px;
+
+            span {
+                font-size: 12px;
+            }
+        }
+    }
+
+    div:first-child,
+    div:last-child {
         @extend .shard-flex-between;
 
         @media screen and (max-width: 768px) {
@@ -53,10 +60,10 @@
         }
 
         .p-inputswitch-slider {
-            background: #8A74F9;
+            background: var(--primary-color);
 
             &:before {
-                background: #ffffff;
+                background: var(--primary-color-white);
                 width: 13px;
                 height: 13px;
                 top: 70%;
@@ -65,7 +72,7 @@
         }
 
         &.p-inputswitch-checked .p-inputswitch-slider {
-            background: #ced4da;
+            background: var(--switch-bg);
 
             &:before {
                 transform: translateX(1rem);

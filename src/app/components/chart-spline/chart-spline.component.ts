@@ -46,13 +46,13 @@ export class ChartSplineComponent {
         toolbar: {
           show: true,
           tools: {
-            download: false,
+            download: '<i class="pi pi-download" style="font-size: 1.1rem"></i>',
             selection: true,
             zoom: false,
-            zoomin: true,
-            zoomout: true,
-            pan: true,
-            reset: '<i class="pi pi-undo fw-semibold">',
+            zoomin: '<i class="pi pi-plus-circle " style="font-size: 1.5rem"></i>',
+            zoomout: '<i class="pi pi-minus-circle ms-1" style="font-size: 1.5rem"></i>',
+            pan: '<i class="pi pi-arrows-alt me-1" style="font-size: 1.5rem"></i>',
+            reset: '<i class="pi pi-undo fw-semibold me-2" >',
           },
         },
         locales: [
